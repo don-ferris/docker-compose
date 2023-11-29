@@ -1,12 +1,17 @@
-Shell Output - ifconfig igb0.50
-igb0.50: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500
-	description: Guest_WiFi_VLAN
-	options=4600003<RXCSUM,TXCSUM,RXCSUM_IPV6,TXCSUM_IPV6,MEXTPG>
-	ether 00:1a:8c:41:a7:74
-	inet 10.1.5.1 netmask 0xffffff00 broadcast 10.1.5.255
-	inet6 fe80::21a:8cff:fe41:a774%igb0.50 prefixlen 64 scopeid 0xd
-	groups: vlan
-	vlan: 50 vlanproto: 802.1q vlanpcp: 0 parent interface: igb0
-	media: Ethernet autoselect (1000baseT <full-duplex>)
-	status: active
-	nd6 options=21<PERFORMNUD,AUTO_LINKLOCAL>
+Nov 22 13:19:05	kernel		vlan4: changing name to 'igb0.50'
+Nov 22 13:19:10	kernel		igb0.50: link state changed to UP
+Nov 22 13:19:10	check_reload_status	431	Linkup starting igb0.50
+Nov 22 16:42:22	kernel		igb0.50: promiscuous mode enabled
+Nov 22 16:42:58	kernel		igb0.50: promiscuous mode disabled
+Nov 22 16:49:55	kernel		igb0.50: promiscuous mode enabled
+Nov 22 16:50:23	kernel		igb0.50: promiscuous mode disabled
+Nov 22 16:53:37	kernel		igb0.50: promiscuous mode enabled
+Nov 22 16:53:55	kernel		igb0.50: promiscuous mode disabled
+Nov 22 16:54:07	kernel		igb0.50: promiscuous mode enabled
+Nov 22 16:54:31	kernel		igb0.50: promiscuous mode disabled
+Nov 22 16:55:13	kernel		igb0.50: promiscuous mode enabled
+Nov 22 16:55:44	kernel		igb0.50: promiscuous mode disabled
+Nov 22 17:12:08	kernel		igb0.50: promiscuous mode enabled
+Nov 22 17:16:33	kernel		igb0.50: promiscuous mode disabled
+Nov 22 17:17:22	kernel		igb0.50: promiscuous mode enabled
+Nov 22 17:17:59	kernel		igb0.50: promiscuous mode disabled
