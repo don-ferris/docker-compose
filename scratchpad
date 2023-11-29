@@ -1,56 +1,33 @@
-netstat -I igb0.50 -s
-ip6 on igb0.50:
-	2 total input datagrams
-	0 datagrams with invalid header received
-	0 datagrams exceeded MTU received
-	0 datagrams with no route received
-	0 datagrams with invalid dst received
-	0 datagrams with unknown proto received
-	0 truncated datagrams received
-	0 input datagrams discarded
-	0 datagrams delivered to an upper layer protocol
-	0 datagrams forwarded to this interface
-	6 datagrams sent from an upper layer protocol
-	0 total discarded output datagrams
-	0 output datagrams fragmented
-	0 output datagrams failed on fragment
-	0 output datagrams succeeded on fragment
-	0 incoming datagrams fragmented
-	0 datagrams reassembled
-	0 datagrams failed on reassembly
-	0 multicast datagrams received
-	6 multicast datagrams sent
-icmp6 on igb0.50:
-	0 total input messages
-	0 total input error messages
-	0 input destination unreachable errors
-	0 input administratively prohibited errors
-	0 input time exceeded errors
-	0 input parameter problem errors
-	0 input packet too big errors
-	0 input echo requests
-	0 input echo replies
-	0 input router solicitations
-	0 input router advertisements
-	0 input neighbor solicitations
-	0 input neighbor advertisements
-	0 input MLD queries
-	0 input MLD reports
-	0 input MLD dones
-	2 total output messages
-	0 total output error messages
-	0 output destination unreachable errors
-	0 output administratively prohibited errors
-	0 output time exceeded errors
-	0 output parameter problem errors
-	0 output packet too big errors
-	0 output echo requests
-	0 output echo replies
-	0 output router solicitations
-	0 output router advertisements
-	2 output neighbor solicitations
-	0 output neighbor advertisements
-	0 output redirects
-	0 output MLD queries
-	0 output MLD reports
-	0 output MLD dones
+General DNS Resolver Options
+EnableEnable DNS resolver
+Listen Port
+53
+The port used for responding to DNS queries. It should normally be left blank unless another service needs to bind to TCP/UDP port 53.
+Enable SSL/TLS ServiceRespond to incoming SSL/TLS queries from local clients
+Configures the DNS Resolver to act as a DNS over SSL/TLS server which can answer queries from clients which also support DNS over TLS. Activating this option disables automatic interface response routing behavior, thus it works best with specific interface bindings.
+SSL/TLS Certificate
+webConfigurator default (654c03509df8c)
+The server certificate to use for SSL/TLS service. The CA chain will be determined automatically.
+SSL/TLS Listen Port
+853
+The port used for responding to SSL/TLS DNS queries. It should normally be left blank unless another service needs to bind to TCP/UDP port 853.
+Network Interfaces
+AllWANLANGUEST_WIFI_VLANWAN IPv6 Link-LocalLAN IPv6 Link-LocalGUEST_WIFI_VLAN IPv6 Link-LocalLocalhost
+Interface IP addresses used by the DNS Resolver for responding to queries from clients. If an interface has both IPv4 and IPv6 addresses, both are used. Queries to addresses not selected in this list are discarded. The default behavior is to respond to queries on every available IPv4 and IPv6 address.
+Outgoing Network Interfaces
+AllWANLANGUEST_WIFI_VLANWAN IPv6 Link-LocalLAN IPv6 Link-LocalGUEST_WIFI_VLAN IPv6 Link-LocalLocalhost
+Utilize different network interface(s) that the DNS Resolver will use to send queries to authoritative servers and receive their replies. By default all interfaces are used.
+Strict Outgoing Network Interface BindingDo not send recursive queries if none of the selected Outgoing Network Interfaces are available.
+By default the DNS Resolver sends recursive DNS requests over any available interfaces if none of the selected Outgoing Network Interfaces are available. This option makes the DNS Resolver refuse recursive queries.
+System Domain Local Zone Type
+Transparent
+The local-zone type used for the pfSense system domain (System | General Setup | Domain). Transparent is the default.
+DNSSECEnable DNSSEC Support
+Python ModuleEnable Python Module
+Enable the Python Module.
+DNS Query ForwardingEnable Forwarding Mode
+If this option is set, DNS queries will be forwarded to the upstream DNS servers defined under System > General Setup or those obtained via dynamic interfaces such as DHCP, PPP, or OpenVPN (if DNS Server Override is enabled there).
+Use SSL/TLS for outgoing DNS Queries to Forwarding Servers
+When set in conjunction with DNS Query Forwarding, queries to all upstream forwarding DNS servers will be sent using SSL/TLS on the default port of 853. Note that ALL configured forwarding servers MUST support SSL/TLS queries on port 853.
+OpenVPN ClientsRegister connected OpenVPN clients in the DNS Resolver
+If this option is set, then the common name (CN) of connected OpenVPN clients will be registered in the DNS Resolver, so that their name can be resolved. This only works for OpenVPN servers (Remote Access SSL/TLS or User Auth with Username as Common Name option) operating in "tun" mode. The domain in System: General Setup should also be set to the proper value.
