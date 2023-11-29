@@ -1,17 +1,56 @@
-Nov 22 13:19:05	kernel		vlan4: changing name to 'igb0.50'
-Nov 22 13:19:10	kernel		igb0.50: link state changed to UP
-Nov 22 13:19:10	check_reload_status	431	Linkup starting igb0.50
-Nov 22 16:42:22	kernel		igb0.50: promiscuous mode enabled
-Nov 22 16:42:58	kernel		igb0.50: promiscuous mode disabled
-Nov 22 16:49:55	kernel		igb0.50: promiscuous mode enabled
-Nov 22 16:50:23	kernel		igb0.50: promiscuous mode disabled
-Nov 22 16:53:37	kernel		igb0.50: promiscuous mode enabled
-Nov 22 16:53:55	kernel		igb0.50: promiscuous mode disabled
-Nov 22 16:54:07	kernel		igb0.50: promiscuous mode enabled
-Nov 22 16:54:31	kernel		igb0.50: promiscuous mode disabled
-Nov 22 16:55:13	kernel		igb0.50: promiscuous mode enabled
-Nov 22 16:55:44	kernel		igb0.50: promiscuous mode disabled
-Nov 22 17:12:08	kernel		igb0.50: promiscuous mode enabled
-Nov 22 17:16:33	kernel		igb0.50: promiscuous mode disabled
-Nov 22 17:17:22	kernel		igb0.50: promiscuous mode enabled
-Nov 22 17:17:59	kernel		igb0.50: promiscuous mode disabled
+netstat -I igb0.50 -s
+ip6 on igb0.50:
+	2 total input datagrams
+	0 datagrams with invalid header received
+	0 datagrams exceeded MTU received
+	0 datagrams with no route received
+	0 datagrams with invalid dst received
+	0 datagrams with unknown proto received
+	0 truncated datagrams received
+	0 input datagrams discarded
+	0 datagrams delivered to an upper layer protocol
+	0 datagrams forwarded to this interface
+	6 datagrams sent from an upper layer protocol
+	0 total discarded output datagrams
+	0 output datagrams fragmented
+	0 output datagrams failed on fragment
+	0 output datagrams succeeded on fragment
+	0 incoming datagrams fragmented
+	0 datagrams reassembled
+	0 datagrams failed on reassembly
+	0 multicast datagrams received
+	6 multicast datagrams sent
+icmp6 on igb0.50:
+	0 total input messages
+	0 total input error messages
+	0 input destination unreachable errors
+	0 input administratively prohibited errors
+	0 input time exceeded errors
+	0 input parameter problem errors
+	0 input packet too big errors
+	0 input echo requests
+	0 input echo replies
+	0 input router solicitations
+	0 input router advertisements
+	0 input neighbor solicitations
+	0 input neighbor advertisements
+	0 input MLD queries
+	0 input MLD reports
+	0 input MLD dones
+	2 total output messages
+	0 total output error messages
+	0 output destination unreachable errors
+	0 output administratively prohibited errors
+	0 output time exceeded errors
+	0 output parameter problem errors
+	0 output packet too big errors
+	0 output echo requests
+	0 output echo replies
+	0 output router solicitations
+	0 output router advertisements
+	2 output neighbor solicitations
+	0 output neighbor advertisements
+	0 output redirects
+	0 output MLD queries
+	0 output MLD reports
+	0 output MLD dones
